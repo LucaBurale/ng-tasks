@@ -1,4 +1,3 @@
-<li class="{{completed?'checked':''}}">
+<li [class] ="{checked: completed, hidden}" (click)="checked()">
   {{text}}
-  <span class="close">X</span>
-</li>
+  <span [class.close] ="{close: true}" (click)="hideTask($event)">x</span></li>
